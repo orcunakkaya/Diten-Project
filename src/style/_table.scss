@@ -1,0 +1,106 @@
+.table{
+    &__header{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) 20.3px;
+        
+        &-item{
+            display: flex;
+            border: 1px solid $o-gray-border-color;
+            outline: none;
+        }
+        .row-count{
+            position: absolute;  
+            margin-left: 8px;
+            color: $o-gray-text-color;
+        }
+        .month{
+            margin: auto;
+            color: $o-gray-text-color;
+        }
+    }
+    &__row {
+       display: grid;
+       padding: 3px;
+       width: 100%;
+    }
+    &__row > td{
+        display: grid;
+        height: 18px;
+        margin: 1px;
+    }
+    tr:nth-child(4), tr:nth-child(8){
+        border-right: 1px solid $o-gray-border-color;
+    }
+    &__container{
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    &__content{
+        width: 100%;
+        border: 1px solid $o-gray-border-color;
+        border-top: none;
+        margin-right: 5px;
+    }
+    &__column{
+        display: flex;
+    }
+    &__pin{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+      &-group{
+         display: flex;
+         flex-direction: column;
+         row-gap: 1px;
+         button{
+             background-color: transparent;
+             border: 1px solid $o-gray-border-color;
+             padding: .1px 4px;
+             i{
+                 font-size: 7px;
+             }
+             i.passive{
+                 color: $o-gray-text-color;
+             }
+         }
+      }
+    }
+}
+.table__header-item{
+    font-size: 12px;
+}
+
+.table-four{
+    padding-bottom: 10px;
+}
+
+.table-color-blue{
+    background-color: rgba(97, 218, 251, .9);
+}
+.table-color-orange{
+    background-color: rgba(255, 166, 0, 0.3);
+}
+.table-color-gray{
+    background-color: rgba(128, 128, 128, 0.19);
+}
+
+.active{
+    background-color: rgba(128, 128, 128, 0.19);
+}
+
+@media screen and(max-width: 860px){
+    .table__row {
+        padding: 2px;
+     }
+}
+
+@media screen and(max-width: 660px){
+.table__row {
+    padding: 2px;
+    td{
+        display: grid;
+         margin: .6px;
+    }
+}
+}

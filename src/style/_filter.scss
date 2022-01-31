@@ -1,0 +1,80 @@
+.filter{
+    margin-top: 1rem;
+    border: 1.8px solid rgb(43, 176, 43);
+    background-color: $white-color;
+    &__options{
+        display: flex;
+        column-gap: 2rem;
+        flex-wrap: wrap;
+        margin: 8px 100px 8px 8px;
+    }
+    transition: all .7s ease;
+}
+
+.custom-select{
+    position: relative;
+    margin-top: 5px;
+    select{
+        width: 10rem;
+        border-radius: $button-border-r;
+        border: 2px solid $o-gray-border-color;
+        padding: 6px 4px;
+        outline: none;
+        color: $o-gray-text-color;
+        option{
+            padding: 6px 10px;
+        }
+    }
+}
+
+.filter__option-text{
+    font-size: .8rem;
+    color: $gray-color;
+}
+
+.filter-bottom-buttons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 10px;
+    background-color: $background;
+    
+    button{
+        border-radius: $button-border-r;
+        padding: 8px 10px;
+        background-color: $white-color;
+        margin-right: 14px;
+        cursor: pointer;
+        &:nth-child(1){
+            border: 2px solid #339AF0;
+            color: #339AF0;
+            margin: 14px 0;
+        }
+        &:nth-child(2){
+            border: 2px solid $o-gray-text-color;
+            color: $o-gray-text-color;
+            margin-right: 0;
+        }
+        &:nth-child(3){
+            border: 2px solid rgba(255, 0, 0, .6);
+            color: rgba(255, 0, 0, .6);
+        }
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .filter__options{
+        display: flex;
+        flex-direction: column;
+        width: 100%!important;
+        align-items: center;
+        row-gap: 15px;
+    }
+    .filter__option{
+        width: 100%!important;
+        margin-right: 0!important;
+    }
+    select{
+        width: 96%!important;
+    }
+}

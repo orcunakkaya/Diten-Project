@@ -1,0 +1,29 @@
+@import "veriables";
+@import "navbar";
+@import "sidebar";
+@import "container";
+@import "breadcrumb";
+@import "search";
+@import "filter";
+@import "table";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+.App{
+  width: 100%;
+  padding-bottom: 100px;
+  min-height: 100vh;
+}
+body{
+  min-height: 100vh;
+  background-color: $background;
+}
+
+.main{
+  margin: 10px;
+}

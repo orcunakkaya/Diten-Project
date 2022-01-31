@@ -1,0 +1,24 @@
+.content-container{
+    margin-left: calc(0px - $side-pd - 17px);
+    margin-top: calc($navbar-height + 1rem);
+    margin-right: 15px;
+    height: 100%;
+    background-color: $white-color;
+    transition: margin-left .7s ease;
+  }
+
+  .content-toggle{
+    margin-left: 220px;
+    transition: margin .7s ease;
+  }
+
+  @media screen and(max-width: 860px) {
+    .content-container{
+      margin-left: 80px;
+      margin-top: 70px;
+    }
+    .content-toggle{
+      margin-left: 165px;
+    }
+    
+  }

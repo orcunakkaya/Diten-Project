@@ -1,0 +1,98 @@
+.search-l{
+    margin: 0 1.3rem 1rem 0 ;
+    background-color: $white-color;
+}
+.search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    button, input{
+        background-color: transparent;
+        border: 2px solid $o-gray-border-color;
+        color: $gray-color;
+    }
+    .button__container{
+        display: flex;
+        align-items: center;
+        column-gap: .6rem;
+        & > button:nth-child(1){
+            border: 2px solid rgb(230, 230, 73);
+        }
+    }
+    button{
+        padding: 8px 12px;
+        border-radius: $button-border-r;
+        cursor: pointer;
+        color: $o-gray-text-color;
+    }
+}
+.search__container{
+    border: 2px solid $o-gray-border-color;
+    border-radius: $button-border-r;
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    input{
+        padding-left: .5rem;
+        width: 90%;
+    }
+    button{
+        color: $o-gray-border-color;
+    }
+}
+.search__button, input{
+    border: none!important;
+    outline: none;
+}
+.icon-buttons button{
+    border: 1px solid $o-gray-border-color!important;
+}
+
+.icon-buttons > button:nth-child(1){
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    background: #339AF0;
+    color: $white-color;
+}
+.icon-buttons > button:nth-child(2){
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+.icon-buttons > button:nth-child(2), .icon-buttons > button:nth-child(3){
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.filter-btn{
+    color: $white-color!important;
+    display: flex;
+    align-items: center;
+    column-gap: .4rem;
+    background: $gray-color!important;
+}
+
+@media screen and (max-width: 1100px) {
+ .search{
+     display: flex;
+     flex-direction: column;
+     row-gap:20px;
+ }  
+}
+
+@media screen and (max-width: 660px) {
+    .search-l{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .search__container{
+        width: 90%;
+    }
+    .button__container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        button{
+            margin-top: 1rem;
+        }
+    }
+}

@@ -1,0 +1,109 @@
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $navbar-height;
+    background-color: $white-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 3rem;
+    padding-left: calc(0px - $side-pd);
+    border-bottom: 1.5px solid $o-gray-border-color;
+    z-index: 9;
+  }
+  
+  .sidebar-toggle{
+    cursor: pointer;
+    height: 50%;
+    width: 2rem;
+    display: grid;
+    place-content: center;
+    color: $o-gray-text-color;
+    transition: margin-left .7s ease;
+  }
+
+  .sidebar-toggle-on{
+    margin-left: calc($side-width - 66px);
+    transition: margin-left .7s ease;
+    i{
+      transform: rotate(180deg);
+      transition: transform .7s ease;
+    }
+  }
+  
+  .nav-items{
+    display: flex;
+    column-gap: 24px;
+    align-items: center;
+    margin-right: 20px;
+    color: $gray-icon-color;
+  }
+  .nav-icon > i {
+    font-size: 1.1rem;
+  }
+  
+  .profile__container{
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+    img{
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+  }
+
+  .nav-icon, .profile__container{
+    cursor: pointer;
+  }
+  
+  .notification{
+    position: relative;
+  }
+  .badge{
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    background-color: #ff0000;
+    color: #fff;
+    font-size: .8rem;
+    padding: 1px 5px;
+    border-radius: 50%;
+  }
+
+@media screen and (max-width: 860px) {
+  .navbar{
+    padding-left: 4rem;
+    height: 55px;
+  }
+  .sidebar-toggle-on{
+    margin-left: calc($side-width - 100px);
+  }
+  .nav-items{
+    column-gap: 16px;
+  }
+  .nav-icon > i {
+    font-size: 1rem;
+  }
+  .badge{
+    font-size: .6rem;
+    padding: 1px 4px;
+    top: -11px;
+    right: -8px;
+  }
+  .profile__container{
+    img{
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+    }
+    .profile__name{
+      font-size: .8rem;
+    }
+    .profile__icon{
+      font-size: .8rem;
+    }
+  }
+}
